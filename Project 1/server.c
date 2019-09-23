@@ -205,12 +205,12 @@ int main(int argc, char *argv[])
     } 
 
     // CREATE TIME QUEUE 
-
+    int changeServAddr_size = sizeof(changeServAddr);
     /* Loop server forever*/
     while(1)
     {
     	/* Accept incoming connection */
-    	if ((clientSock = accept(serverSock, (struct sockaddr *)&changeServAddr, (socklen_t*)&changeServAddr))<0) 
+    	if ((clientSock = accept(serverSock, (struct sockaddr *)&changeServAddr, (socklen_t*)&changeServAddr_size))<0) 
             { 
                 perror("accept failed"); 
                 exit(EXIT_FAILURE); 

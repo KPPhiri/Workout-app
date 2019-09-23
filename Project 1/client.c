@@ -158,7 +158,6 @@ int main(int argc, char *argv[])
     /* Receive and print response from the server */
     unsigned int total_bytes_received = 0;
 
-    int i = 0;
     while (total_bytes_received < REPLYLEN) {
         memset(&rcvBuf, 0, RCVBUFSIZE);
         bytes_received = recv(clientSock, rcvBuf, RCVBUFSIZE - 1, 0);
