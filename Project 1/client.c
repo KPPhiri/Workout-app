@@ -1,7 +1,7 @@
 /*///////////////////////////////////////////////////////////
 *
 * FILE:		client.c
-* AUTHOR:	Your Name Here
+* AUTHOR:    Kee-Bum Philip Phiri 
 * PROJECT:	CS 3251 Project 1 - Professor Jun Xu 
 * DESCRIPTION:	Network Client Code
 * CREDIT:	Adapted from Professor Traynor
@@ -114,7 +114,8 @@ int main(int argc, char *argv[])
     //Creating sendBug
     //Adding cmd to sendBug
     int send_length = 0;
-    for(int i = 0; i < strlen(cmd); i++) {
+    int i = 0;
+    for(i = 0; i < strlen(cmd); i++) {
 
         sndBuf[send_length] = cmd[i];
         send_length++;
@@ -125,7 +126,7 @@ int main(int argc, char *argv[])
 
 
     //Adding account
-    for(int i = 0; i < strlen(curAccount); i++) {
+    for(i = 0; i < strlen(curAccount); i++) {
 
         sndBuf[send_length] = curAccount[i];
         send_length++;
@@ -135,7 +136,7 @@ int main(int argc, char *argv[])
     //Adding second account
     if (strcmp(cmd, "TRANSFER") == 0) {
 
-        for(int i = 0; i < strlen(transferAccount); i++) {
+        for(i = 0; i < strlen(transferAccount); i++) {
             sndBuf[send_length] = transferAccount[i];
             send_length++;
         }

@@ -1,7 +1,7 @@
 /*///////////////////////////////////////////////////////////
 *
 * FILE:		server.c
-* AUTHOR:	Your Name Here
+* AUTHOR:	Kee-Bum Philip Phiri 
 * PROJECT:	CS 3251 Project 1 - Professor Jun Xu
 * DESCRIPTION:	Network Server Code
 * CREDIT:	Adapted from Professor Traynor
