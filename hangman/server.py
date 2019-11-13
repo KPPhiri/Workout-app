@@ -154,7 +154,7 @@ sock.bind((ip, port))
 sock.listen(5)
 
 #Getting guess words
-file = open('../word.txt')
+file = open('word.txt')
 guess_words = file.read().split('\n')
 file.close()
 connections = set()
