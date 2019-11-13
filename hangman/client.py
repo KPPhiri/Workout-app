@@ -191,4 +191,5 @@ if __name__ == '__main__':
 		if multi_mode == 'y':
 			multi_player_simulation(sock)
 		else:
+			print('starting single player')
 			single_player_simulation(sock)

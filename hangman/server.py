@@ -183,6 +183,7 @@ while True:
 		else:
 			waiting_room.append(connection)
 			waiting_msgs = create_game_message_packet(25, "Waiting for other player!")
+			print('sending', waiting_msgs)
 			connection.send(waiting_msgs)
 
 
