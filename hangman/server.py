@@ -159,6 +159,7 @@ guess_words = file.read().split('\n')
 file.close()
 connections = set()
 waiting_room = []
+print('server running')	
 
 while True: 
 	# Establish connection with client.
@@ -171,7 +172,8 @@ while True:
 		game_packet = create_game_message_packet(len(msg), msg)
 		connection.send(game_packet)
 		connection.close() 
-	elif message == 'n': 	
+	elif message == 'n': 
+		print('starting single player')	
 		threading.Thread(target = create_single_game_simulation, kwargs={'connections':connections , 'connection':connection, 'guess_words': guess_words}).start()
 	elif message == 'y':
 		if len(waiting_room) == 1:
