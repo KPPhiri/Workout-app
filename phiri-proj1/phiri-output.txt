@@ -1,0 +1,42 @@
+-bash-4.1$ ./nameChanger BAL myChecking 127.0.0.1 1234
+myChecking has a balance of 5000
+-bash-4.1$ ./nameChanger BAL mySavings 127.0.0.1 1234
+mySavings has a balance of 6000
+-bash-4.1$ ./nameChanger BAL myCD 127.0.0.1 1234
+myCD has a balance of 7000
+-bash-4.1$ ./nameChanger BAL my401k 127.0.0.1 1234
+my401k has a balance of 8000
+-bash-4.1$ ./nameChanger BAL my529 127.0.0.1 1234
+my529 has a balance of 9000
+-bash-4.1$ ./nameChanger WITHDRAW my529  800 127.0.0.1 1234
+Successful withdraw from my529 of amount 800 and the new balance is 8200
+-bash-4.1$ ./nameChanger BAL my529 127.0.0.1 1234
+my529 has a balance of 8200
+-bash-4.1$ ./nameChanger WITHDRAW myCD 60 127.0.0.1 1234
+Successful withdraw from myCD of amount 60 and the new balance is 6940
+-bash-4.1$ ./nameChanger BAL myCD 127.0.0.1 1234
+myCD has a balance of 6940
+-bash-4.1$ ./nameChanger TRANSFER myChecking mySavings 200 127.0.0.1 1234
+Successful transfer from myChecking to mySavings of amount 200 and the new balance is 4800
+-bash-4.1$ ./nameChanger BAL myChecking 127.0.0.1 1234
+myChecking has a balance of 4800
+-bash-4.1$ ./nameChanger BAL mySavings 127.0.0.1 1234
+mySavings has a balance of 6200
+-bash-4.1$ ./nameChanger WITHDRAW my401k 500 127.0.0.1 1234
+Successful withdraw from my401k of amount 500 and the new balance is 7500
+-bash-4.1$ ./nameChanger WITHDRAW my401k 500 127.0.0.1 1234
+Successful withdraw from my401k of amount 500 and the new balance is 7000
+-bash-4.1$ ./nameChanger WITHDRAW my401k 500 127.0.0.1 1234
+Successful withdraw from my401k of amount 500 and the new balance is 6500
+-bash-4.1$ ./nameChanger WITHDRAW my401k 500 127.0.0.1 1234
+Failed withdraw from my401k.
+-bash-4.1$ ./nameChanger BAL myCD 127.0.0.1 1234
+myCD has a balance of 6940
+-bash-4.1$ ./nameChanger BAL mySavings 127.0.0.1 1234
+mySavings has a balance of 6200
+-bash-4.1$ ./nameChanger TRANSFER myCD mySavings 2200 127.0.0.1 1234
+Successful transfer from myCD to mySavings of amount 2200 and the new balance is 4740
+-bash-4.1$ ./nameChanger BAL myCD 127.0.0.1 1234
+myCD has a balance of 4740
+-bash-4.1$ ./nameChanger BAL mySavings 127.0.0.1 1234
+mySavings has a balance of 8400
