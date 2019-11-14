@@ -3,54 +3,6 @@ import sys
 import socket                
 from collections import Counter
 
-# sock = socket.socket()          
-  
-# port = 12346              
-  
-# sock.connect(('127.0.0.1', port)) 
-  
-# # receive data from the server 
-# print(sock.recv(1024)) 
-# # close the connection 
-# sock.close()   
-
-class mysocket:
-	def __init__(self, sock=None):
-	    if sock is None:
-	        self.sock = socket.socket(
-	            socket.AF_INET, socket.SOCK_STREAM)
-	    else:
-	        self.sock = sock
-
-	def connect(self, host, port):
-	        self.sock.connect((host, port))
-
-	def mysend(self, msg):
-	    totalsent = 0
-	    MSGLEN = len(msg)
-	    while totalsent < MSGLEN:
-	        sent = self.sock.send(msg[totalsent:])
-	        if sent == 0:
-	            raise RuntimeError("socket connection broken")
-	        totalsent = totalsent + sent
-
-	def myreceive(self, MSGLEN= 10000):
-	    chunks = []
-	    bytes_recd = 0
-	    while bytes_recd < MSGLEN:
-	        chunk = self.sock.recv(1024)
-	        if chunk == '':
-	            raise RuntimeError("socket connection broken")
-	        chunks.append(chunk)
-	        bytes_recd = bytes_recd + len(chunk)
-	    return ''.join(chunks)
-
-
-# MSGLEN = 10000
-# # sock.myreceive()
-# sock.mysend('hello world')
-# sock.myreceive()
-
 def create_game_packet(msg_flag, data):
 	byte_arr = bytearray([msg_flag])
 	byte_arr.extend(data.encode())

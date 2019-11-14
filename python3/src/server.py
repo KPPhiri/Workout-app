@@ -4,8 +4,7 @@ import socket
 import random
 import threading 
 from collections import Counter
-
-
+from time import sleep
 
 
 def create_game_packet(msg_flag, word_length, num_incorrect, data, incorrect_guesses):
@@ -73,6 +72,7 @@ def create_single_game_simulation(connections, connection, guess_words):
 
 		if game_over:
 			connections.remove(connection)
+			sleep(1)
 			connection.send(game_packet)
 			# print('closing connection')
 			connection.close() 
@@ -84,7 +84,7 @@ def create_multiplayer_game_simulation(connections, connection1, connection2, gu
 	num_incorrect = 0
 	incorrect_guesses = []
 	game_over = False
-	print("Starting game, random word chosen: {}".format(guess_word))
+	print(guess_word)
 	
 	# connections.add(connection1)
 	# connections.add(connection2)
